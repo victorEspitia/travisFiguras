@@ -13,6 +13,5 @@ before_script:
 script:
   - cd test
   - lettuce
-  - cd features
   - coverage run --branch FigurasTest.py
   - coverage report
