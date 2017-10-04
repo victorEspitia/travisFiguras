@@ -4,8 +4,6 @@ python:
   - "2.7"
 
 install:
-  - "sudo pip install --upgrade six"
-  - "sudo pip install -U setuptools"
   - "sudo pip install -r requerimientos.txt"
 
 before_script:
