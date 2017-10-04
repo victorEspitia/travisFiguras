@@ -1,0 +1,18 @@
+---
+lenguage: python
+python:
+  - "2.7"
+
+install:
+  - "sudo pip install -r requerimientos.txt"
+
+before_script:
+  - "autopep8 -ir *"
+  - "flake8 --max-complexity=10 --exclude=*.txt,*.md,*.pyc,steps.py,*.feature *"
+
+script:
+  - cd test
+  - lettuce
+  - cd features
+  - coverage run --branch FigurasTest.py
+  - coverage report
